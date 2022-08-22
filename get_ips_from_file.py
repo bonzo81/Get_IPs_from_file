@@ -41,7 +41,3 @@ for ip in ips:
     out_file.write(ip)
     out_file.write('\n')
 out_file.close()
-
-
-
-
