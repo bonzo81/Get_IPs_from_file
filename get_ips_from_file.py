@@ -17,6 +17,8 @@ def validate_ip_address(address):
 
 f = codecs.open(sys.argv[1],'r',encoding='utf-8')
 text = f.read()
+arg_name = sys.argv[1]
+file_name = arg_name.replace('.txt', '')
 
 bad_ips = []
 ips = [] 
@@ -34,7 +36,7 @@ print(ips)
 print("Invalid IPs:")
 print(bad_ips)
 
-out_file = open('./validated_ips.txt', 'w')
+out_file = open(f'./{file_name}-VALIDATED_IPs.txt', 'w')
 for ip in ips:
     out_file.write(ip)
     out_file.write('\n')
