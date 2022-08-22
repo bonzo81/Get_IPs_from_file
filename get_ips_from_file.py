@@ -2,6 +2,7 @@
 import ipaddress
 import re
 import sys
+import codecs
 
 
 def validate_ip_address(address):
@@ -14,7 +15,7 @@ def validate_ip_address(address):
         return False
 
 
-f = open(sys.argv[1],'r')
+f = codecs.open(sys.argv[1],'r',encoding='utf-8')
 text = f.read()
 
 bad_ips = []
